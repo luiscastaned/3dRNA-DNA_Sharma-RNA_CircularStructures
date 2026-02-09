@@ -1,0 +1,16 @@
+_jobid ee1c352a-e682-46cc-8363-2f2fc4832b56
+_version 2.0
+_lib_version Lib_1
+name 3dRNA_DNA
+seq GUGAUGAGGAUGAUGGAAAUCUCGAAGUAAAGUUAUCAUUAGAGGAGAUGGAGAAAGGUUUCAUAUUAAUAUGGAACAACCAAUAUUAUUAAGACUUCCUGAAGAUGAAGCAAAAGUGUUGAGAGAACAAAUUCGAA
+num 8
+num_samplings 1
+_minimize no
+_pred_ss yes
+constraints_type none
+_ss_method RNAfold
+loop_building partial_dg
+_assemble yes
+_mol_type rna
+_rna_type circular
+_routine optimize

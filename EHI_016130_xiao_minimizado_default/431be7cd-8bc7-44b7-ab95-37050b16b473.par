@@ -1,0 +1,14 @@
+_jobid 431be7cd-8bc7-44b7-ab95-37050b16b473
+_version 2.0
+_lib_version Lib_1
+name 3dRNA_DNA
+seq CUCCUCCAGCAAAGACAAACUGCUGCACCUGCACCAGCUAUGGAAAUUUGUUAGCUGAUAUUAGAAGUGGUAUUACUCUUAGGUCAGCUGCUGAUAGAAAAUUAGACACUGCCGCACCUGUUGUCAGUGAUGCAGGAAAACAAGAUUUGAC
+num 5
+num_samplings 500
+_minimize yes
+_pred_ss yes
+_ss_method RNAfold
+loop_building partial_dg
+_mol_type rna
+_rna_type circular
+_routine Default

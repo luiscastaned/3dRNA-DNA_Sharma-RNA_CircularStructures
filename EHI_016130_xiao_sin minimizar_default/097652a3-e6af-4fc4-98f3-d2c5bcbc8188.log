@@ -1,0 +1,708 @@
+**********************************************************************************************
+                                                                                              
+                     NNNNNNNN        NNNNNNNN        SSSSSSSSSSSSSSS      PPPPPPPPPPPPPPPPP   
+                     N:::::::N       N::::::N      SS:::::::::::::::S     P::::::::::::::::P  
+                     N::::::::N      N::::::N     S:::::SSSSSS::::::S     P::::::PPPPPP:::::P 
+                     N:::::::::N     N::::::N     S:::::S     SSSSSSS     PP:::::P     P:::::P
+                     N::::::::::N    N::::::N     S:::::S                   P::::P     P:::::P
+                     N:::::::::::N   N::::::N     S:::::S                   P::::P     P:::::P
+                     N:::::::N::::N  N::::::N      S::::SSSS                P::::PPPPPP:::::P 
+                     N::::::N N::::N N::::::N       SS::::::SSSSS           P:::::::::::::PP  
+                     N::::::N  N::::N:::::::N         SSS::::::::SS         P::::PPPPPPPPP    
+                     N::::::N   N:::::::::::N            SSSSSS::::S        P::::P            
+                     N::::::N    N::::::::::N                 S:::::S       P::::P            
+                     N::::::N     N:::::::::N                 S:::::S       P::::P            
+                     N::::::N      N::::::::N     SSSSSSS     S:::::S     PP::::::PP          
+                     N::::::N       N:::::::N     S::::::SSSSSS:::::S     P::::::::P          
+                     N::::::N        N::::::N     S:::::::::::::::SS      P::::::::P          
+                     NNNNNNNN         NNNNNNN      SSSSSSSSSSSSSSS        PPPPPPPPPP          
+                                                                                              
+                           Nucleic Acid Prediction method developed by XiaoLab                
+**********************************************************************************************
+Start time: Tue Jan 20 10:03:18 2026
+
+NSP version: 2.0.1
+NSP library path: /home/share/apps/nsp2/lib1
+# Reading sequence
+Seq:CUCCUCCAGCAAAGACAAACUGCUGCACCUGCACCAGCUAUGGAAAUUUGUUAGCUGAUAUUAGAAGUGGUAUUACUCUUAGGUCAGCUGCUGAUAGAAAAUUAGACACUGCCGCACCUGUUGUCAGUGAUGCAGGAAAACAAGAUUUGAC
+# Reading secondary structure
+# Extract residue conformations...
+confs: AAA(28) AAC(23) AAG(32) AAU(19) ACA(12) ACC(24) ACG(19) ACU(14) AGA(17) AGC(33) AGG(37) AGU(23) AUA(15) AUC(18) AUG(16) AUU(12) CAA(16) CAC(20) CAG(23) CAU(8) CCA(15) CCC(27) CCG(42) CCU(16) CGA(25) CGC(17) CGG(39) CGU(22) CUA(19) CUC(21) CUG(32) CUU(9) GAA(47) GAC(25) GAG(30) GAU(15) GCA(22) GCC(34) GCG(38) GCU(22) GGA(31) GGC(34) GGG(43) GGU(42) GUA(20) GUC(26) GUG(29) GUU(25) UAA(15) UAC(9) UAG(11) UAU(8) UCA(23) UCC(14) UCG(10) UCU(13) UGA(30) UGC(22) UGG(31) UGU(25) UUA(15) UUC(14) UUG(16) UUU(6) 
+# Trajectory file: ./3dRNA_DNA.traj.p1.pdb
+# Read parameters...
+Reading parameters file: /home/share/apps/nsp2/lib1/RNA/pars/nuc3d/mc/6p.par
+# Set parameters...
+# Print parameters...
+mc_heat_steps 30000
+mc_cool_steps 1000000
+mc_cycle_steps 500
+mc_write_steps 50
+mc_heat_rate 0.7
+mc_dec_rate 0.995
+mc_init_tempr 20
+mc_queue warm:50000:2
+mc_lowest_rate 0.007
+mc_lowest_en 0.5
+mc_lowest_tempr 20
+mc_highest_tempr 200
+mc_bond_length_weight 0
+mc_bond_angle_weight 0
+mc_bond_angle_std 0
+mc_bond_dihedral_weight 0
+mc_bond_dihedral_std 0
+mc_pairing_weight 1
+mc_wc_weight 0
+mc_nwc_weight 0
+mc_stacking_weight 2
+mc_constraints_weight 0
+mc_crash_weight 2000
+mc_rg_weight 0.01
+mc_contacts_weight 0.01
+mc_vdw_weight 0
+mc_max_shift 2
+# Set continuous points...
+# Print continuous, angel, dihedral points...
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 
+# Read initial structure
+# Read alignment file
+# Check constraints
+# Initializing scorer...
+# Seting indices...
+# DHMC parameters
+Sample helix templates: Yes
+Sample loop templates: Yes
+Sources: 
+Excludes: 
+# Load bp distances...
+# Set bps
+# Print bps
+6-24 7-23 8-22 9-21 10-20 20-10 21-9 22-8 23-7 24-6 27-135 28-134 29-133 30-132 31-131 32-130 33-42 34-41 35-40 40-35 41-34 42-33 51-89 52-88 53-87 54-86 55-85 56-84 57-83 58-82 62-78 63-77 64-76 66-75 67-74 68-73 73-68 74-67 75-66 76-64 77-63 78-62 82-58 83-57 84-56 85-55 86-54 87-53 88-52 89-51 90-104 91-103 92-102 93-101 94-100 100-94 101-93 102-92 103-91 104-90 106-128 107-127 108-126 109-125 110-124 111-122 113-120 114-119 119-114 120-113 122-111 124-110 125-109 126-108 127-107 128-106 130-32 131-31 132-30 133-29 134-28 135-27 
+# Transform bps to constraints...
+# Set 2D trees
+# Set templates
+# Print templates...
+SSE (0x248a610) : 
+Helix:   
+Loop:  UGCACCGGAAAACAAGAUUUGACCUCCUCCA ((..(()).....................)) 24 25 26 27 28 29 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 1 2 3 4 5 6 7 8 
+SSE (0x1dd4150) : 
+Helix:  CAGCAUGCUG ((((())))) 7 8 9 10 11 21 22 23 24 25
+Loop:  CAAAGACAAACUG ((.........)) 10 11 12 13 14 15 16 17 18 19 20 21 22 
+SSE (0x1a3e900) : 
+Helix:  CCUGCAUGCAGG (((((()))))) 28 29 30 31 32 33 131 132 133 134 135 136
+Loop:  CACCGGAAAUUUGUUAUGCUAGACAUGAUG (((())........(())(()).(()).)) 32 33 34 35 42 43 44 45 46 47 48 49 50 51 52 53 89 90 91 92 104 105 106 107 108 128 129 130 131 132 
+SSE (0x2e4cfd0) : 
+Helix:  CCAUGG ((())) 34 35 36 41 42 43
+Loop:  CAGCUAUG ((....)) 35 36 37 38 39 40 41 42 
+SSE (0x2f007e0) : 
+Helix:  UAGCUGAUGUCAGCUG (((((((()))))))) 52 53 54 55 56 57 58 59 83 84 85 86 87 88 89 90
+Loop:  AUAUUAGCUUAGGU ((...(())...)) 58 59 60 61 62 63 64 78 79 80 81 82 83 84 
+SSE (0x2f00250) : 
+Helix:  AGAUCU ((())) 63 64 65 77 78 79
+Loop:  GAAGUACUC ((.(()))) 64 65 66 67 68 75 76 77 78 
+SSE (0x2e4d560) : 
+Helix:  GUGUAC ((())) 67 68 69 74 75 76
+Loop:  UGGUAUUA ((....)) 68 69 70 71 72 73 74 75 
+SSE (0x1798810) : 
+Helix:  CUGAUAUUAG ((((())))) 91 92 93 94 95 101 102 103 104 105
+Loop:  AUAGAAAAU ((.....)) 94 95 96 97 98 99 100 101 102 
+SSE (0x1a3e370) : 
+Helix:  CACUGCAGUG ((((())))) 107 108 109 110 111 125 126 127 128 129
+Loop:  UGCCGCGUUGUCA ((..(())...)) 110 111 112 113 114 115 120 121 122 123 124 125 126 
+SSE (0x1798da0) : 
+Helix:  GCGU (()) 114 115 120 121
+Loop:  GCACCUGU ((....)) 114 115 116 117 118 119 120 121 
+# Set moving elements
+# Print moving elements
+355 moving elements: DHMC_MVEL_FRAG(25-135) DHMC_MVEL_FRAG(25-136) DHMC_MVEL_FRAG(25-137) DHMC_MVEL_FRAG(25-138) DHMC_MVEL_FRAG(25-139) DHMC_MVEL_FRAG(25-140) DHMC_MVEL_FRAG(25-141) DHMC_MVEL_FRAG(25-142) DHMC_MVEL_FRAG(25-143) DHMC_MVEL_FRAG(25-144) DHMC_MVEL_FRAG(25-145) DHMC_MVEL_FRAG(25-146) DHMC_MVEL_FRAG(25-147) DHMC_MVEL_FRAG(25-148) DHMC_MVEL_FRAG(25-149) DHMC_MVEL_FRAG(25-150) DHMC_MVEL_FRAG(25-0) DHMC_MVEL_FRAG(25-1) DHMC_MVEL_FRAG(25-2) DHMC_MVEL_FRAG(25-3) DHMC_MVEL_FRAG(25-4) DHMC_MVEL_FRAG(25-5) DHMC_MVEL_FRAG(26-135) DHMC_MVEL_FRAG(26-136) DHMC_MVEL_FRAG(26-137) DHMC_MVEL_FRAG(26-138) DHMC_MVEL_FRAG(26-139) DHMC_MVEL_FRAG(26-140) DHMC_MVEL_FRAG(26-141) DHMC_MVEL_FRAG(26-142) DHMC_MVEL_FRAG(26-143) DHMC_MVEL_FRAG(26-144) DHMC_MVEL_FRAG(26-145) DHMC_MVEL_FRAG(26-146) DHMC_MVEL_FRAG(26-147) DHMC_MVEL_FRAG(26-148) DHMC_MVEL_FRAG(26-149) DHMC_MVEL_FRAG(26-150) DHMC_MVEL_FRAG(26-0) DHMC_MVEL_FRAG(26-1) DHMC_MVEL_FRAG(26-2) DHMC_MVEL_FRAG(26-3) DHMC_MVEL_FRAG(26-4) DHMC_MVEL_FRAG(26-5) DHMC_MVEL_FRAG(27-135) DHMC_MVEL_FRAG(27-136) DHMC_MVEL_FRAG(27-137) DHMC_MVEL_FRAG(27-138) DHMC_MVEL_FRAG(27-139) DHMC_MVEL_FRAG(27-140) DHMC_MVEL_FRAG(27-141) DHMC_MVEL_FRAG(27-142) DHMC_MVEL_FRAG(27-143) DHMC_MVEL_FRAG(27-144) DHMC_MVEL_FRAG(27-145) DHMC_MVEL_FRAG(27-146) DHMC_MVEL_FRAG(27-147) DHMC_MVEL_FRAG(27-148) DHMC_MVEL_FRAG(27-149) DHMC_MVEL_FRAG(27-150) DHMC_MVEL_FRAG(27-0) DHMC_MVEL_FRAG(27-1) DHMC_MVEL_FRAG(27-2) DHMC_MVEL_FRAG(27-3) DHMC_MVEL_FRAG(27-4) DHMC_MVEL_FRAG(27-5) DHMC_MVEL_FRAG(136-139) DHMC_MVEL_FRAG(136-140) DHMC_MVEL_FRAG(136-141) DHMC_MVEL_FRAG(136-142) DHMC_MVEL_FRAG(136-143) DHMC_MVEL_FRAG(136-144) DHMC_MVEL_FRAG(136-145) DHMC_MVEL_FRAG(136-146) DHMC_MVEL_FRAG(136-147) DHMC_MVEL_FRAG(136-148) DHMC_MVEL_FRAG(136-149) DHMC_MVEL_FRAG(136-150) DHMC_MVEL_FRAG(136-0) DHMC_MVEL_FRAG(136-1) DHMC_MVEL_FRAG(136-2) DHMC_MVEL_FRAG(136-3) DHMC_MVEL_FRAG(136-4) DHMC_MVEL_FRAG(136-5) DHMC_MVEL_FRAG(137-140) DHMC_MVEL_FRAG(137-141) DHMC_MVEL_FRAG(137-142) DHMC_MVEL_FRAG(137-143) DHMC_MVEL_FRAG(137-144) DHMC_MVEL_FRAG(137-145) DHMC_MVEL_FRAG(137-146) DHMC_MVEL_FRAG(137-147) DHMC_MVEL_FRAG(137-148) DHMC_MVEL_FRAG(137-149) DHMC_MVEL_FRAG(137-150) DHMC_MVEL_FRAG(137-0) DHMC_MVEL_FRAG(137-1) DHMC_MVEL_FRAG(137-2) DHMC_MVEL_FRAG(137-3) DHMC_MVEL_FRAG(137-4) DHMC_MVEL_FRAG(137-5) DHMC_MVEL_FRAG(138-141) DHMC_MVEL_FRAG(138-142) DHMC_MVEL_FRAG(138-143) DHMC_MVEL_FRAG(138-144) DHMC_MVEL_FRAG(138-145) DHMC_MVEL_FRAG(138-146) DHMC_MVEL_FRAG(138-147) DHMC_MVEL_FRAG(138-148) DHMC_MVEL_FRAG(138-149) DHMC_MVEL_FRAG(138-150) DHMC_MVEL_FRAG(138-0) DHMC_MVEL_FRAG(138-1) DHMC_MVEL_FRAG(138-2) DHMC_MVEL_FRAG(138-3) DHMC_MVEL_FRAG(138-4) DHMC_MVEL_FRAG(138-5) DHMC_MVEL_FRAG(139-142) DHMC_MVEL_FRAG(139-143) DHMC_MVEL_FRAG(139-144) DHMC_MVEL_FRAG(139-145) DHMC_MVEL_FRAG(139-146) DHMC_MVEL_FRAG(139-147) DHMC_MVEL_FRAG(139-148) DHMC_MVEL_FRAG(139-149) DHMC_MVEL_FRAG(139-150) DHMC_MVEL_FRAG(139-0) DHMC_MVEL_FRAG(139-1) DHMC_MVEL_FRAG(139-2) DHMC_MVEL_FRAG(139-3) DHMC_MVEL_FRAG(139-4) DHMC_MVEL_FRAG(139-5) DHMC_MVEL_FRAG(140-143) DHMC_MVEL_FRAG(140-144) DHMC_MVEL_FRAG(140-145) DHMC_MVEL_FRAG(140-146) DHMC_MVEL_FRAG(140-147) DHMC_MVEL_FRAG(140-148) DHMC_MVEL_FRAG(140-149) DHMC_MVEL_FRAG(140-150) DHMC_MVEL_FRAG(140-0) DHMC_MVEL_FRAG(140-1) DHMC_MVEL_FRAG(140-2) DHMC_MVEL_FRAG(140-3) DHMC_MVEL_FRAG(140-4) DHMC_MVEL_FRAG(140-5) DHMC_MVEL_FRAG(141-144) DHMC_MVEL_FRAG(141-145) DHMC_MVEL_FRAG(141-146) DHMC_MVEL_FRAG(141-147) DHMC_MVEL_FRAG(141-148) DHMC_MVEL_FRAG(141-149) DHMC_MVEL_FRAG(141-150) DHMC_MVEL_FRAG(141-0) DHMC_MVEL_FRAG(141-1) DHMC_MVEL_FRAG(141-2) DHMC_MVEL_FRAG(141-3) DHMC_MVEL_FRAG(141-4) DHMC_MVEL_FRAG(141-5) DHMC_MVEL_FRAG(142-145) DHMC_MVEL_FRAG(142-146) DHMC_MVEL_FRAG(142-147) DHMC_MVEL_FRAG(142-148) DHMC_MVEL_FRAG(142-149) DHMC_MVEL_FRAG(142-150) DHMC_MVEL_FRAG(142-0) DHMC_MVEL_FRAG(142-1) DHMC_MVEL_FRAG(142-2) DHMC_MVEL_FRAG(142-3) DHMC_MVEL_FRAG(142-4) DHMC_MVEL_FRAG(142-5) DHMC_MVEL_FRAG(143-146) DHMC_MVEL_FRAG(143-147) DHMC_MVEL_FRAG(143-148) DHMC_MVEL_FRAG(143-149) DHMC_MVEL_FRAG(143-150) DHMC_MVEL_FRAG(143-0) DHMC_MVEL_FRAG(143-1) DHMC_MVEL_FRAG(143-2) DHMC_MVEL_FRAG(143-3) DHMC_MVEL_FRAG(143-4) DHMC_MVEL_FRAG(143-5) DHMC_MVEL_FRAG(144-147) DHMC_MVEL_FRAG(144-148) DHMC_MVEL_FRAG(144-149) DHMC_MVEL_FRAG(144-150) DHMC_MVEL_FRAG(144-0) DHMC_MVEL_FRAG(144-1) DHMC_MVEL_FRAG(144-2) DHMC_MVEL_FRAG(144-3) DHMC_MVEL_FRAG(144-4) DHMC_MVEL_FRAG(144-5) DHMC_MVEL_FRAG(145-148) DHMC_MVEL_FRAG(145-149) DHMC_MVEL_FRAG(145-150) DHMC_MVEL_FRAG(145-0) DHMC_MVEL_FRAG(145-1) DHMC_MVEL_FRAG(145-2) DHMC_MVEL_FRAG(145-3) DHMC_MVEL_FRAG(145-4) DHMC_MVEL_FRAG(145-5) DHMC_MVEL_FRAG(146-149) DHMC_MVEL_FRAG(146-150) DHMC_MVEL_FRAG(146-0) DHMC_MVEL_FRAG(146-1) DHMC_MVEL_FRAG(146-2) DHMC_MVEL_FRAG(146-3) DHMC_MVEL_FRAG(146-4) DHMC_MVEL_FRAG(146-5) DHMC_MVEL_FRAG(147-150) DHMC_MVEL_FRAG(147-0) DHMC_MVEL_FRAG(147-1) DHMC_MVEL_FRAG(147-2) DHMC_MVEL_FRAG(147-3) DHMC_MVEL_FRAG(147-4) DHMC_MVEL_FRAG(147-5) DHMC_MVEL_FRAG(148-0) DHMC_MVEL_FRAG(148-1) DHMC_MVEL_FRAG(148-2) DHMC_MVEL_FRAG(148-3) DHMC_MVEL_FRAG(148-4) DHMC_MVEL_FRAG(148-5) DHMC_MVEL_FRAG(149-0) DHMC_MVEL_FRAG(149-1) DHMC_MVEL_FRAG(149-2) DHMC_MVEL_FRAG(149-3) DHMC_MVEL_FRAG(149-4) DHMC_MVEL_FRAG(149-5) DHMC_MVEL_FRAG(150-0) DHMC_MVEL_FRAG(150-1) DHMC_MVEL_FRAG(150-2) DHMC_MVEL_FRAG(150-3) DHMC_MVEL_FRAG(150-4) DHMC_MVEL_FRAG(150-5) DHMC_MVEL_FRAG(0-3) DHMC_MVEL_FRAG(0-4) DHMC_MVEL_FRAG(0-5) DHMC_MVEL_FRAG(1-4) DHMC_MVEL_FRAG(1-5) DHMC_MVEL_FRAG(2-5) DHMC_MVEL_HELIX(6, 7, 8, 9, 10, 20, 21, 22, 23, 24) DHMC_MVEL_LOOP(9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21) DHMC_MVEL_HELIX(27, 28, 29, 30, 31, 32, 130, 131, 132, 133, 134, 135) DHMC_MVEL_FRAG(33-42) DHMC_MVEL_FRAG(33-43) DHMC_MVEL_FRAG(33-44) DHMC_MVEL_FRAG(33-45) DHMC_MVEL_FRAG(33-46) DHMC_MVEL_FRAG(33-47) DHMC_MVEL_FRAG(33-48) DHMC_MVEL_FRAG(33-49) DHMC_MVEL_FRAG(33-50) DHMC_MVEL_FRAG(33-89) DHMC_MVEL_FRAG(33-104) DHMC_MVEL_FRAG(33-105) DHMC_MVEL_FRAG(33-128) DHMC_MVEL_FRAG(33-129) DHMC_MVEL_FRAG(43-46) DHMC_MVEL_FRAG(43-47) DHMC_MVEL_FRAG(43-48) DHMC_MVEL_FRAG(43-49) DHMC_MVEL_FRAG(43-50) DHMC_MVEL_FRAG(43-89) DHMC_MVEL_FRAG(43-104) DHMC_MVEL_FRAG(43-105) DHMC_MVEL_FRAG(43-128) DHMC_MVEL_FRAG(43-129) DHMC_MVEL_FRAG(44-47) DHMC_MVEL_FRAG(44-48) DHMC_MVEL_FRAG(44-49) DHMC_MVEL_FRAG(44-50) DHMC_MVEL_FRAG(44-89) DHMC_MVEL_FRAG(44-104) DHMC_MVEL_FRAG(44-105) DHMC_MVEL_FRAG(44-128) DHMC_MVEL_FRAG(44-129) DHMC_MVEL_FRAG(45-48) DHMC_MVEL_FRAG(45-49) DHMC_MVEL_FRAG(45-50) DHMC_MVEL_FRAG(45-89) DHMC_MVEL_FRAG(45-104) DHMC_MVEL_FRAG(45-105) DHMC_MVEL_FRAG(45-128) DHMC_MVEL_FRAG(45-129) DHMC_MVEL_FRAG(46-49) DHMC_MVEL_FRAG(46-50) DHMC_MVEL_FRAG(46-89) DHMC_MVEL_FRAG(46-104) DHMC_MVEL_FRAG(46-105) DHMC_MVEL_FRAG(46-128) DHMC_MVEL_FRAG(46-129) DHMC_MVEL_FRAG(47-50) DHMC_MVEL_FRAG(47-89) DHMC_MVEL_FRAG(47-104) DHMC_MVEL_FRAG(47-105) DHMC_MVEL_FRAG(47-128) DHMC_MVEL_FRAG(47-129) DHMC_MVEL_FRAG(48-89) DHMC_MVEL_FRAG(48-104) DHMC_MVEL_FRAG(48-105) DHMC_MVEL_FRAG(48-128) DHMC_MVEL_FRAG(48-129) DHMC_MVEL_FRAG(49-89) DHMC_MVEL_FRAG(49-104) DHMC_MVEL_FRAG(49-105) DHMC_MVEL_FRAG(49-128) DHMC_MVEL_FRAG(49-129) DHMC_MVEL_FRAG(50-89) DHMC_MVEL_FRAG(50-104) DHMC_MVEL_FRAG(50-105) DHMC_MVEL_FRAG(50-128) DHMC_MVEL_FRAG(50-129) DHMC_MVEL_FRAG(51-89) DHMC_MVEL_FRAG(51-104) DHMC_MVEL_FRAG(51-105) DHMC_MVEL_FRAG(51-128) DHMC_MVEL_FRAG(51-129) DHMC_MVEL_FRAG(90-104) DHMC_MVEL_FRAG(90-105) DHMC_MVEL_FRAG(90-128) DHMC_MVEL_FRAG(90-129) DHMC_MVEL_FRAG(105-128) DHMC_MVEL_FRAG(105-129) DHMC_MVEL_FRAG(106-128) DHMC_MVEL_FRAG(106-129) DHMC_MVEL_HELIX(33, 34, 35, 40, 41, 42) DHMC_MVEL_LOOP(34, 35, 36, 37, 38, 39, 40, 41) DHMC_MVEL_HELIX(51, 52, 53, 54, 55, 56, 57, 58, 82, 83, 84, 85, 86, 87, 88, 89) DHMC_MVEL_LOOP(57, 58, 59, 60, 61, 62, 63, 77, 78, 79, 80, 81, 82, 83) DHMC_MVEL_HELIX(62, 63, 64, 76, 77, 78) DHMC_MVEL_LOOP(63, 64, 65, 66, 67, 74, 75, 76, 77) DHMC_MVEL_HELIX(66, 67, 68, 73, 74, 75) DHMC_MVEL_LOOP(67, 68, 69, 70, 71, 72, 73, 74) DHMC_MVEL_HELIX(90, 91, 92, 93, 94, 100, 101, 102, 103, 104) DHMC_MVEL_LOOP(93, 94, 95, 96, 97, 98, 99, 100, 101) DHMC_MVEL_HELIX(106, 107, 108, 109, 110, 124, 125, 126, 127, 128) DHMC_MVEL_LOOP(109, 110, 111, 112, 113, 114, 119, 120, 121, 122, 123, 124, 125) DHMC_MVEL_HELIX(113, 114, 119, 120) DHMC_MVEL_LOOP(113, 114, 115, 116, 117, 118, 119, 120) DHMC_MVEL_FRAG3(41-43) DHMC_MVEL_FRAG3(42-44) DHMC_MVEL_FRAG3(43-45) DHMC_MVEL_FRAG3(44-46) DHMC_MVEL_FRAG3(45-47) DHMC_MVEL_FRAG3(46-48) DHMC_MVEL_FRAG3(47-49) DHMC_MVEL_FRAG3(48-50) DHMC_MVEL_FRAG3(49-51) DHMC_MVEL_FRAG3(50-52) DHMC_MVEL_FRAG3(103-105) DHMC_MVEL_FRAG3(104-106) DHMC_MVEL_FRAG3(105-107) DHMC_MVEL_FRAG3(127-129) DHMC_MVEL_FRAG3(128-130) DHMC_MVEL_FRAG3(129-131) 
+# Print constraints
+
+# Displaying starting information...
+=========================================================
+New Job: 3dRNA_DNA
+Time: Tue Jan 20 10:03:46 2026
+
+Sequence: CUCCUCCAGCAAAGACAAACUGCUGCACCUGCACCAGCUAUGGAAAUUUGUUAGCUGAUAUUAGAAGUGGUAUUACUCUUAGGUCAGCUGCUGAUAGAAAAUUAGACACUGCCGCACCUGUUGUCAGUGAUGCAGGAAAACAAGAUUUGAC
+2D Structure: ......(((((.........)))))..(((((((((....)))........((((((((...(((.(((....))))))...))))))))(((((.....))))).((((((.((....)).).))))).))))))...............
+Molecular Type: RNA
+Number: 5
+----------------------------------------
+# Check initial structure...
+# Initializing running...
+# Save fixed ranges...
+# Carrying out CG processing with the Chain...
+# Init space...
+# MC...
+1: 51956.6(total) 0(len) 0(ang) 0(dih) 52104.3(crash) 0(cons) 0(vdw) -33.599(stacking) -130.685(pairing) 16.5562(rg) 20(tempr) 0(rate)
+50: 45626.2(total) 0(len) 0(ang) 0(dih) 45702.6(crash) 0(cons) 0(vdw) 29.3142(stacking) -121.331(pairing) 15.5949(rg) 20(tempr) 0(rate)
+100: 34333.1(total) 0(len) 0(ang) 0(dih) 34452.4(crash) 0(cons) 0(vdw) 2.29249(stacking) -135.707(pairing) 14.1352(rg) 20(tempr) 0(rate)
+150: 20936(total) 0(len) 0(ang) 0(dih) 21070(crash) 0(cons) 0(vdw) -12.8214(stacking) -135.793(pairing) 14.6608(rg) 20(tempr) 0(rate)
+200: 5964.41(total) 0(len) 0(ang) 0(dih) 6065.28(crash) 0(cons) 0(vdw) 23.1169(stacking) -139.228(pairing) 15.2398(rg) 20(tempr) 0(rate)
+250: 5468.44(total) 0(len) 0(ang) 0(dih) 5578.7(crash) 0(cons) 0(vdw) 11.7161(stacking) -137.579(pairing) 15.6077(rg) 20(tempr) 0(rate)
+300: 5371.7(total) 0(len) 0(ang) 0(dih) 5503.48(crash) 0(cons) 0(vdw) -9.38898(stacking) -138.888(pairing) 16.4971(rg) 20(tempr) 0(rate)
+350: 4378.79(total) 0(len) 0(ang) 0(dih) 4509.67(crash) 0(cons) 0(vdw) -9.38898(stacking) -138.635(pairing) 17.1381(rg) 20(tempr) 0(rate)
+400: 4402.04(total) 0(len) 0(ang) 0(dih) 4508.9(crash) 0(cons) 0(vdw) 3.9247(stacking) -128.116(pairing) 17.3328(rg) 20(tempr) 0(rate)
+450: 4392.08(total) 0(len) 0(ang) 0(dih) 4508.9(crash) 0(cons) 0(vdw) -2.15291(stacking) -130.593(pairing) 15.9287(rg) 20(tempr) 0(rate)
+500: 4257.75(total) 0(len) 0(ang) 0(dih) 4418.26(crash) 0(cons) 0(vdw) -37.5713(stacking) -138.371(pairing) 15.4287(rg) 20(tempr) 0(rate)
+550: 4256.73(total) 0(len) 0(ang) 0(dih) 4418.26(crash) 0(cons) 0(vdw) -37.5713(stacking) -138.837(pairing) 14.8756(rg) 18(tempr) 0.706(rate)
+600: 99.4507(total) 0(len) 0(ang) 0(dih) 271.391(crash) 0(cons) 0(vdw) -60.6643(stacking) -125.087(pairing) 13.8111(rg) 18(tempr) 0.706(rate)
+650: 86.7976(total) 0(len) 0(ang) 0(dih) 265.859(crash) 0(cons) 0(vdw) -60.5115(stacking) -133.12(pairing) 14.5698(rg) 18(tempr) 0.706(rate)
+700: 86.7874(total) 0(len) 0(ang) 0(dih) 263.434(crash) 0(cons) 0(vdw) -57.3966(stacking) -135.061(pairing) 15.8112(rg) 18(tempr) 0.706(rate)
+750: 93.0363(total) 0(len) 0(ang) 0(dih) 269.953(crash) 0(cons) 0(vdw) -57.3966(stacking) -134.558(pairing) 15.0374(rg) 18(tempr) 0.706(rate)
+800: 90.2466(total) 0(len) 0(ang) 0(dih) 269.953(crash) 0(cons) 0(vdw) -59.8538(stacking) -135.516(pairing) 15.663(rg) 18(tempr) 0.706(rate)
+850: -202.001(total) 0(len) 0(ang) 0(dih) 5.47065(crash) 0(cons) 0(vdw) -89.3917(stacking) -133.752(pairing) 15.6713(rg) 18(tempr) 0.706(rate)
+900: -84.901(total) 0(len) 0(ang) 0(dih) 57.7522(crash) 0(cons) 0(vdw) -49.0007(stacking) -110.697(pairing) 17.0448(rg) 18(tempr) 0.706(rate)
+950: -113.408(total) 0(len) 0(ang) 0(dih) 29.9415(crash) 0(cons) 0(vdw) -49.0007(stacking) -110.316(pairing) 15.9664(rg) 18(tempr) 0.706(rate)
+1000: -145.088(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -51.3722(stacking) -110.697(pairing) 16.9816(rg) 18(tempr) 0.706(rate)
+1050: -147.145(total) 0(len) 0(ang) 0(dih) 18.066(crash) 0(cons) 0(vdw) -68.4583(stacking) -113(pairing) 16.2478(rg) 16.2(tempr) 0.774(rate)
+1100: -146.565(total) 0(len) 0(ang) 0(dih) 18.066(crash) 0(cons) 0(vdw) -68.4583(stacking) -110.726(pairing) 14.5532(rg) 16.2(tempr) 0.774(rate)
+1150: -155.116(total) 0(len) 0(ang) 0(dih) 9.5373(crash) 0(cons) 0(vdw) -68.4583(stacking) -110.726(pairing) 14.5311(rg) 16.2(tempr) 0.774(rate)
+1200: -195.71(total) 0(len) 0(ang) 0(dih) 10.4529(crash) 0(cons) 0(vdw) -86.1129(stacking) -134.02(pairing) 13.97(rg) 16.2(tempr) 0.774(rate)
+1250: -206.87(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -80.3642(stacking) -138.134(pairing) 11.629(rg) 16.2(tempr) 0.774(rate)
+1300: -230.293(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -109.23(stacking) -136.64(pairing) 15.5759(rg) 16.2(tempr) 0.774(rate)
+1350: -229.991(total) 0(len) 0(ang) 0(dih) 0.322909(crash) 0(cons) 0(vdw) -109.23(stacking) -136.64(pairing) 15.5556(rg) 16.2(tempr) 0.774(rate)
+1400: -181.559(total) 0(len) 0(ang) 0(dih) 16.4263(crash) 0(cons) 0(vdw) -85.1646(stacking) -126.335(pairing) 13.5139(rg) 16.2(tempr) 0.774(rate)
+1450: -201.679(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -85.1646(stacking) -129.381(pairing) 12.8667(rg) 16.2(tempr) 0.774(rate)
+1500: -174.6(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -57.3827(stacking) -129.965(pairing) 12.747(rg) 16.2(tempr) 0.774(rate)
+1550: -175.61(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -48.8352(stacking) -141.196(pairing) 14.4206(rg) 14.58(tempr) 0.74(rate)
+1600: -183.38(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -49.1943(stacking) -149.789(pairing) 15.6031(rg) 14.58(tempr) 0.74(rate)
+1650: -162.198(total) 0(len) 0(ang) 0(dih) 1.07318(crash) 0(cons) 0(vdw) -32.3464(stacking) -145.842(pairing) 14.9174(rg) 14.58(tempr) 0.74(rate)
+1700: -189.203(total) 0(len) 0(ang) 0(dih) 0.177821(crash) 0(cons) 0(vdw) -56.2162(stacking) -151.033(pairing) 17.8685(rg) 14.58(tempr) 0.74(rate)
+1750: -141.417(total) 0(len) 0(ang) 0(dih) 0.177821(crash) 0(cons) 0(vdw) -16.0504(stacking) -143.986(pairing) 18.4421(rg) 14.58(tempr) 0.74(rate)
+1800: -135.765(total) 0(len) 0(ang) 0(dih) 0.177821(crash) 0(cons) 0(vdw) -12.742(stacking) -144.093(pairing) 20.8929(rg) 14.58(tempr) 0.74(rate)
+1850: -173.854(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -51.3261(stacking) -148.687(pairing) 26.1582(rg) 14.58(tempr) 0.74(rate)
+1900: -191.236(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -53.102(stacking) -158.677(pairing) 20.5435(rg) 14.58(tempr) 0.74(rate)
+1950: -193.382(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -59.6337(stacking) -158.46(pairing) 24.7112(rg) 14.58(tempr) 0.74(rate)
+2000: -145.616(total) 0(len) 0(ang) 0(dih) 10.5965(crash) 0(cons) 0(vdw) -38.5693(stacking) -143.089(pairing) 25.4462(rg) 14.58(tempr) 0.74(rate)
+2050: -186.324(total) 0(len) 0(ang) 0(dih) 9.75901(crash) 0(cons) 0(vdw) -75.5527(stacking) -139.887(pairing) 19.356(rg) 13.122(tempr) 0.748(rate)
+2100: -190.138(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -67.4159(stacking) -143.538(pairing) 20.8158(rg) 13.122(tempr) 0.748(rate)
+2150: -168.004(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -51.1396(stacking) -136.105(pairing) 19.2408(rg) 13.122(tempr) 0.748(rate)
+2200: -199.321(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -80.7217(stacking) -142.585(pairing) 23.9849(rg) 13.122(tempr) 0.748(rate)
+2250: -158.483(total) 0(len) 0(ang) 0(dih) 30.9353(crash) 0(cons) 0(vdw) -74.5825(stacking) -140.399(pairing) 25.5629(rg) 13.122(tempr) 0.748(rate)
+2300: -168.905(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -50.695(stacking) -149.871(pairing) 31.661(rg) 13.122(tempr) 0.748(rate)
+2350: -159.512(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -45.5346(stacking) -145.146(pairing) 31.1688(rg) 13.122(tempr) 0.748(rate)
+2400: -137.864(total) 0(len) 0(ang) 0(dih) 6.8954(crash) 0(cons) 0(vdw) -42.643(stacking) -130.721(pairing) 28.6038(rg) 13.122(tempr) 0.748(rate)
+2450: -142.05(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -39.8811(stacking) -130.721(pairing) 28.5518(rg) 13.122(tempr) 0.748(rate)
+2500: -170.886(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -63.4929(stacking) -138.193(pairing) 30.7999(rg) 13.122(tempr) 0.748(rate)
+2550: -161.967(total) 0(len) 0(ang) 0(dih) 2.75939(crash) 0(cons) 0(vdw) -61.3525(stacking) -133.17(pairing) 29.7966(rg) 11.8098(tempr) 0.838(rate)
+2600: -170.767(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -69.2168(stacking) -127.824(pairing) 26.2736(rg) 11.8098(tempr) 0.838(rate)
+2650: -158.5(total) 0(len) 0(ang) 0(dih) 1.08564(crash) 0(cons) 0(vdw) -54.2074(stacking) -133.088(pairing) 27.71(rg) 11.8098(tempr) 0.838(rate)
+2700: -140.855(total) 0(len) 0(ang) 0(dih) 1.08564(crash) 0(cons) 0(vdw) -57.1708(stacking) -113.728(pairing) 28.9578(rg) 11.8098(tempr) 0.838(rate)
+2750: -139.267(total) 0(len) 0(ang) 0(dih) 1.08564(crash) 0(cons) 0(vdw) -36.4083(stacking) -134.315(pairing) 30.3705(rg) 11.8098(tempr) 0.838(rate)
+2800: -138.398(total) 0(len) 0(ang) 0(dih) 1.08564(crash) 0(cons) 0(vdw) -33.6346(stacking) -128.152(pairing) 22.3035(rg) 11.8098(tempr) 0.838(rate)
+2850: -65.591(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) 26.0965(stacking) -121.486(pairing) 29.7987(rg) 11.8098(tempr) 0.838(rate)
+2900: -63.8084(total) 0(len) 0(ang) 0(dih) 0.0456634(crash) 0(cons) 0(vdw) 30.9582(stacking) -123.758(pairing) 28.9454(rg) 11.8098(tempr) 0.838(rate)
+2950: -137.852(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -43.2212(stacking) -128.675(pairing) 34.0449(rg) 11.8098(tempr) 0.838(rate)
+3000: -119.937(total) 0(len) 0(ang) 0(dih) 0.127599(crash) 0(cons) 0(vdw) -28.978(stacking) -129.843(pairing) 38.7562(rg) 11.8098(tempr) 0.838(rate)
+3050: -107.249(total) 0(len) 0(ang) 0(dih) 0.127599(crash) 0(cons) 0(vdw) -26.0296(stacking) -125.434(pairing) 44.0874(rg) 10.6288(tempr) 0.728(rate)
+3100: -126.394(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -47.2609(stacking) -120.27(pairing) 41.1365(rg) 10.6288(tempr) 0.728(rate)
+3150: -171.322(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -79.2488(stacking) -133.042(pairing) 38.0469(rg) 10.6288(tempr) 0.728(rate)
+3200: -164.129(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -71.5936(stacking) -127.465(pairing) 32.0079(rg) 10.6288(tempr) 0.728(rate)
+3250: -130.122(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -43.0101(stacking) -128.136(pairing) 38.1024(rg) 10.6288(tempr) 0.728(rate)
+3300: -157.047(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -59.931(stacking) -135.812(pairing) 35.7749(rg) 10.6288(tempr) 0.728(rate)
+3350: -150.539(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -56.4717(stacking) -138.931(pairing) 41.9419(rg) 10.6288(tempr) 0.728(rate)
+3400: -140.916(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -53.9661(stacking) -137.118(pairing) 47.247(rg) 10.6288(tempr) 0.728(rate)
+3450: -139.454(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -36.4262(stacking) -145.365(pairing) 39.4158(rg) 10.6288(tempr) 0.728(rate)
+3500: -145.892(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -34.5338(stacking) -146.018(pairing) 31.7383(rg) 10.6288(tempr) 0.728(rate)
+3550: -147.124(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -36.7945(stacking) -143.412(pairing) 30.1611(rg) 9.56594(tempr) 0.79(rate)
+3600: -148.003(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -34.6652(stacking) -146.381(pairing) 30.1216(rg) 9.56594(tempr) 0.79(rate)
+3650: -145.212(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -34.6652(stacking) -145.443(pairing) 31.9747(rg) 9.56594(tempr) 0.79(rate)
+3700: -143.699(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -34.6652(stacking) -145.443(pairing) 33.4879(rg) 9.56594(tempr) 0.79(rate)
+3750: -172.297(total) 0(len) 0(ang) 0(dih) 2.92125(crash) 0(cons) 0(vdw) -61.1505(stacking) -158.778(pairing) 44.7098(rg) 9.56594(tempr) 0.79(rate)
+3800: -226.706(total) 0(len) 0(ang) 0(dih) 3.02716(crash) 0(cons) 0(vdw) -117.949(stacking) -152.495(pairing) 40.7114(rg) 9.56594(tempr) 0.79(rate)
+3850: -223.114(total) 0(len) 0(ang) 0(dih) 3.02716(crash) 0(cons) 0(vdw) -125.977(stacking) -148.29(pairing) 48.1262(rg) 9.56594(tempr) 0.79(rate)
+3900: -157.598(total) 0(len) 0(ang) 0(dih) 3.02716(crash) 0(cons) 0(vdw) -74.6713(stacking) -136.309(pairing) 50.3556(rg) 9.56594(tempr) 0.79(rate)
+3950: -214.011(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -131.859(stacking) -138.596(pairing) 56.4441(rg) 9.56594(tempr) 0.79(rate)
+4000: -190.14(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -129.487(stacking) -138.596(pairing) 77.9438(rg) 9.56594(tempr) 0.79(rate)
+4050: -187.96(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -121.126(stacking) -145.693(pairing) 78.8594(rg) 8.60934(tempr) 0.804(rate)
+4100: -190.338(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -112.763(stacking) -144.694(pairing) 67.1195(rg) 8.60934(tempr) 0.804(rate)
+4150: -122.582(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -56.8696(stacking) -126.107(pairing) 60.394(rg) 8.60934(tempr) 0.804(rate)
+4200: -112.28(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -56.2734(stacking) -126.092(pairing) 70.0852(rg) 8.60934(tempr) 0.804(rate)
+4250: -117.603(total) 0(len) 0(ang) 0(dih) 23.9027(crash) 0(cons) 0(vdw) -70.9078(stacking) -135.605(pairing) 65.0068(rg) 8.60934(tempr) 0.804(rate)
+4300: -106.489(total) 0(len) 0(ang) 0(dih) 23.9027(crash) 0(cons) 0(vdw) -64.4891(stacking) -134.531(pairing) 68.628(rg) 8.60934(tempr) 0.804(rate)
+4350: -194.732(total) 0(len) 0(ang) 0(dih) 23.9027(crash) 0(cons) 0(vdw) -118.723(stacking) -143.586(pairing) 43.6741(rg) 8.60934(tempr) 0.804(rate)
+4400: -183.874(total) 0(len) 0(ang) 0(dih) 31.6303(crash) 0(cons) 0(vdw) -116.888(stacking) -140.509(pairing) 41.893(rg) 8.60934(tempr) 0.804(rate)
+4450: -163.085(total) 0(len) 0(ang) 0(dih) 23.9027(crash) 0(cons) 0(vdw) -99.9625(stacking) -132.401(pairing) 45.3759(rg) 8.60934(tempr) 0.804(rate)
+4500: -148.017(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -87.7829(stacking) -130.414(pairing) 70.1806(rg) 8.60934(tempr) 0.804(rate)
+4550: -145.129(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -87.7829(stacking) -128.655(pairing) 71.3084(rg) 7.74841(tempr) 0.802(rate)
+4600: -159.752(total) 0(len) 0(ang) 0(dih) 0.0547585(crash) 0(cons) 0(vdw) -76.1668(stacking) -141.124(pairing) 57.4841(rg) 7.74841(tempr) 0.802(rate)
+4650: -163.592(total) 0(len) 0(ang) 0(dih) 2.17023(crash) 0(cons) 0(vdw) -81.9429(stacking) -140.363(pairing) 56.5444(rg) 7.74841(tempr) 0.802(rate)
+4700: -139.18(total) 0(len) 0(ang) 0(dih) 3.31051(crash) 0(cons) 0(vdw) -73.6866(stacking) -124.484(pairing) 55.6797(rg) 7.74841(tempr) 0.802(rate)
+4750: -169.535(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -105.409(stacking) -125.403(pairing) 61.2773(rg) 7.74841(tempr) 0.802(rate)
+4800: -168.086(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -105.409(stacking) -124.184(pairing) 61.5066(rg) 7.74841(tempr) 0.802(rate)
+4850: -168.343(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -108.079(stacking) -127.931(pairing) 67.6672(rg) 7.74841(tempr) 0.802(rate)
+4900: -170.996(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -111.979(stacking) -121.159(pairing) 62.1419(rg) 7.74841(tempr) 0.802(rate)
+4950: -188.161(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -120.438(stacking) -133.252(pairing) 65.5286(rg) 7.74841(tempr) 0.802(rate)
+5000: -195.538(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -120.438(stacking) -135.962(pairing) 60.8618(rg) 7.74841(tempr) 0.802(rate)
+5050: -167.851(total) 0(len) 0(ang) 0(dih) 0.397681(crash) 0(cons) 0(vdw) -99.4475(stacking) -130.417(pairing) 61.6154(rg) 6.97357(tempr) 0.822(rate)
+5100: -109.492(total) 0(len) 0(ang) 0(dih) 1.03428(crash) 0(cons) 0(vdw) -54.3988(stacking) -106.854(pairing) 50.7265(rg) 6.97357(tempr) 0.822(rate)
+5150: -91.9781(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -34.0283(stacking) -107.504(pairing) 49.5541(rg) 6.97357(tempr) 0.822(rate)
+5200: -97.8685(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -37.787(stacking) -110.807(pairing) 50.7259(rg) 6.97357(tempr) 0.822(rate)
+5250: -156.041(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -86.4299(stacking) -120.19(pairing) 50.5779(rg) 6.97357(tempr) 0.822(rate)
+5300: -151.269(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -82.2158(stacking) -120.19(pairing) 51.1364(rg) 6.97357(tempr) 0.822(rate)
+5350: -137.978(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -78.0513(stacking) -109.947(pairing) 50.02(rg) 6.97357(tempr) 0.822(rate)
+5400: -163.379(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -102.778(stacking) -115.77(pairing) 55.1688(rg) 6.97357(tempr) 0.822(rate)
+5450: -165.443(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -105.414(stacking) -115.49(pairing) 55.4605(rg) 6.97357(tempr) 0.822(rate)
+5500: -121.872(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -40.2516(stacking) -134.292(pairing) 52.6716(rg) 6.97357(tempr) 0.822(rate)
+5550: -119.442(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -42.6236(stacking) -133.108(pairing) 56.2899(rg) 6.27621(tempr) 0.772(rate)
+5600: -131.426(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -49.2531(stacking) -136.641(pairing) 54.4681(rg) 6.27621(tempr) 0.772(rate)
+5650: -120.322(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -34.7788(stacking) -145.375(pairing) 59.8321(rg) 6.27621(tempr) 0.772(rate)
+5700: -121.251(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -29.7046(stacking) -155.551(pairing) 64.004(rg) 6.27621(tempr) 0.772(rate)
+5750: -104.444(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -25.7181(stacking) -152.153(pairing) 73.4275(rg) 6.27621(tempr) 0.772(rate)
+5800: -111.113(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -30.7351(stacking) -150.832(pairing) 70.454(rg) 6.27621(tempr) 0.772(rate)
+5850: -116.913(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -30.7351(stacking) -151.174(pairing) 64.9965(rg) 6.27621(tempr) 0.772(rate)
+5900: -108.494(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -36.5185(stacking) -134.627(pairing) 62.6508(rg) 6.27621(tempr) 0.772(rate)
+5950: -104.174(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -23.1746(stacking) -135.348(pairing) 54.3482(rg) 6.27621(tempr) 0.772(rate)
+6000: -86.7525(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -1.13986(stacking) -142.584(pairing) 56.9715(rg) 6.27621(tempr) 0.772(rate)
+6050: -81.6326(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) 7.61539(stacking) -147.373(pairing) 58.1252(rg) 5.64859(tempr) 0.802(rate)
+6100: -95.274(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) 2.40461(stacking) -153.648(pairing) 55.9694(rg) 5.64859(tempr) 0.802(rate)
+6150: -97.1141(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) 2.40461(stacking) -153.648(pairing) 54.1293(rg) 5.64859(tempr) 0.802(rate)
+6200: -73.0992(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) 16.9919(stacking) -147.696(pairing) 57.605(rg) 5.64859(tempr) 0.802(rate)
+6250: -77.48(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -12.8133(stacking) -129.03(pairing) 64.363(rg) 5.64859(tempr) 0.802(rate)
+6300: -101.902(total) 0(len) 0(ang) 0(dih) 8.52895(crash) 0(cons) 0(vdw) -42.0649(stacking) -140.208(pairing) 71.8419(rg) 5.64859(tempr) 0.802(rate)
+6350: -145.427(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -65.4947(stacking) -136.995(pairing) 57.0625(rg) 5.64859(tempr) 0.802(rate)
+6400: -163.364(total) 0(len) 0(ang) 0(dih) 5.62006(crash) 0(cons) 0(vdw) -92.9904(stacking) -131.316(pairing) 55.3221(rg) 5.64859(tempr) 0.802(rate)
+6450: -155.564(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -90.2669(stacking) -130.106(pairing) 64.8095(rg) 5.64859(tempr) 0.802(rate)
+6500: -160.953(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -84.8466(stacking) -130.054(pairing) 53.9478(rg) 5.64859(tempr) 0.802(rate)
+6550: -169.733(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -95.901(stacking) -126.694(pairing) 52.8621(rg) 5.08373(tempr) 0.806(rate)
+6600: -169.263(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -97.1451(stacking) -128.063(pairing) 55.9445(rg) 5.08373(tempr) 0.806(rate)
+6650: -164.852(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -91.1275(stacking) -127.744(pairing) 54.0197(rg) 5.08373(tempr) 0.806(rate)
+6700: -148.615(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -77.1511(stacking) -124.865(pairing) 53.4011(rg) 5.08373(tempr) 0.806(rate)
+6750: -150.577(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -79.6868(stacking) -122.642(pairing) 51.7515(rg) 5.08373(tempr) 0.806(rate)
+6800: -180.507(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -108.384(stacking) -128.839(pairing) 56.7159(rg) 5.08373(tempr) 0.806(rate)
+6850: -191.709(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -122.971(stacking) -134.79(pairing) 66.0529(rg) 5.08373(tempr) 0.806(rate)
+6900: -199.563(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -122.734(stacking) -137.858(pairing) 61.0284(rg) 5.08373(tempr) 0.806(rate)
+6950: -194.114(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -120.086(stacking) -138.039(pairing) 64.0115(rg) 5.08373(tempr) 0.806(rate)
+7000: -165.137(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -91.1258(stacking) -139.446(pairing) 65.435(rg) 5.08373(tempr) 0.806(rate)
+7050: -144.728(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -62.4174(stacking) -149.748(pairing) 67.4375(rg) 4.57536(tempr) 0.81(rate)
+7100: -134.451(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -63.2526(stacking) -142.125(pairing) 70.9264(rg) 4.57536(tempr) 0.81(rate)
+7150: -124.865(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -55.5921(stacking) -141.123(pairing) 71.8503(rg) 4.57536(tempr) 0.81(rate)
+7200: -142.18(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -76.8999(stacking) -143.625(pairing) 77.4275(rg) 4.57536(tempr) 0.81(rate)
+7250: -146.183(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -88.4326(stacking) -135.123(pairing) 76.455(rg) 4.57536(tempr) 0.81(rate)
+7300: -160.906(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -91.1949(stacking) -137.662(pairing) 67.034(rg) 4.57536(tempr) 0.81(rate)
+7350: -166.514(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -105.866(stacking) -140.013(pairing) 78.4484(rg) 4.57536(tempr) 0.81(rate)
+7400: -151.985(total) 0(len) 0(ang) 0(dih) 3.77321(crash) 0(cons) 0(vdw) -98.0104(stacking) -140.496(pairing) 82.749(rg) 4.57536(tempr) 0.81(rate)
+7450: -113.006(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -49.7332(stacking) -138.462(pairing) 74.2716(rg) 4.57536(tempr) 0.81(rate)
+7500: -102.479(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -50.7976(stacking) -130.847(pairing) 78.2476(rg) 4.57536(tempr) 0.81(rate)
+7550: -55.2975(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -18.9742(stacking) -119.996(pairing) 82.7553(rg) 4.11782(tempr) 0.806(rate)
+7600: -65.9732(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -21.1989(stacking) -117.002(pairing) 71.3105(rg) 4.11782(tempr) 0.806(rate)
+7650: -65.2341(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -21.1989(stacking) -117.002(pairing) 72.0497(rg) 4.11782(tempr) 0.806(rate)
+7700: -73.8774(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -21.1989(stacking) -117.002(pairing) 63.4064(rg) 4.11782(tempr) 0.806(rate)
+7750: -87.4255(total) 0(len) 0(ang) 0(dih) 0.917501(crash) 0(cons) 0(vdw) -42.3133(stacking) -119.872(pairing) 73.8423(rg) 4.11782(tempr) 0.806(rate)
+7800: -117.49(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -69.5488(stacking) -119.726(pairing) 71.7849(rg) 4.11782(tempr) 0.806(rate)
+7850: -106.684(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -52.9625(stacking) -121.156(pairing) 67.4341(rg) 4.11782(tempr) 0.806(rate)
+7900: -102.744(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -53.3001(stacking) -123.076(pairing) 73.6313(rg) 4.11782(tempr) 0.806(rate)
+7950: -101.644(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -65.1734(stacking) -123.313(pairing) 86.8428(rg) 4.11782(tempr) 0.806(rate)
+8000: -101.626(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -67.7556(stacking) -110.147(pairing) 76.2763(rg) 4.11782(tempr) 0.806(rate)
+8050: -142.35(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -93.5493(stacking) -123.048(pairing) 74.2476(rg) 3.70604(tempr) 0.798(rate)
+8100: -146.383(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -93.5493(stacking) -122.558(pairing) 69.7234(rg) 3.70604(tempr) 0.798(rate)
+8150: -122.736(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -79.2196(stacking) -121.463(pairing) 77.9473(rg) 3.70604(tempr) 0.798(rate)
+8200: -120.384(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -80.5292(stacking) -117.089(pairing) 77.2344(rg) 3.70604(tempr) 0.798(rate)
+8250: -137.524(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -90.8092(stacking) -115.072(pairing) 68.3572(rg) 3.70604(tempr) 0.798(rate)
+8300: -147.184(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -97.3213(stacking) -121.876(pairing) 72.0136(rg) 3.70604(tempr) 0.798(rate)
+8350: -146.138(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -97.3213(stacking) -120.964(pairing) 72.1469(rg) 3.70604(tempr) 0.798(rate)
+8400: -197.065(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -134.685(stacking) -137.324(pairing) 74.9451(rg) 3.70604(tempr) 0.798(rate)
+8450: -204.06(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -134.415(stacking) -143.131(pairing) 73.4858(rg) 3.70604(tempr) 0.798(rate)
+8500: -217.109(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -141.945(stacking) -148.771(pairing) 73.6074(rg) 3.70604(tempr) 0.798(rate)
+8550: -207.304(total) 0(len) 0(ang) 0(dih) 0.266184(crash) 0(cons) 0(vdw) -138.732(stacking) -144.312(pairing) 75.4735(rg) 3.33544(tempr) 0.78(rate)
+8600: -183.251(total) 0(len) 0(ang) 0(dih) 0.266184(crash) 0(cons) 0(vdw) -134.412(stacking) -139.215(pairing) 90.1103(rg) 3.33544(tempr) 0.78(rate)
+8650: -145.725(total) 0(len) 0(ang) 0(dih) 0.266184(crash) 0(cons) 0(vdw) -108.451(stacking) -128.231(pairing) 90.6897(rg) 3.33544(tempr) 0.78(rate)
+8700: -142.998(total) 0(len) 0(ang) 0(dih) 0.266184(crash) 0(cons) 0(vdw) -89.712(stacking) -143.148(pairing) 89.5958(rg) 3.33544(tempr) 0.78(rate)
+8750: -151.843(total) 0(len) 0(ang) 0(dih) 0.404495(crash) 0(cons) 0(vdw) -87.7813(stacking) -145.011(pairing) 80.545(rg) 3.33544(tempr) 0.78(rate)
+8800: -153.884(total) 0(len) 0(ang) 0(dih) 0.266184(crash) 0(cons) 0(vdw) -92.0247(stacking) -141.756(pairing) 79.6299(rg) 3.33544(tempr) 0.78(rate)
+8850: -158.24(total) 0(len) 0(ang) 0(dih) 0.266184(crash) 0(cons) 0(vdw) -92.0247(stacking) -140.497(pairing) 74.0146(rg) 3.33544(tempr) 0.78(rate)
+8900: -156.784(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -92.3874(stacking) -140.522(pairing) 76.1256(rg) 3.33544(tempr) 0.78(rate)
+8950: -171.703(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -102.052(stacking) -144.864(pairing) 75.2132(rg) 3.33544(tempr) 0.78(rate)
+9000: -168.32(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -101.7(stacking) -145.129(pairing) 78.509(rg) 3.33544(tempr) 0.78(rate)
+9050: -204.095(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -128.429(stacking) -153.175(pairing) 77.5087(rg) 3.00189(tempr) 0.756(rate)
+9100: -184.103(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -132.434(stacking) -145.114(pairing) 93.4457(rg) 3.00189(tempr) 0.756(rate)
+9150: -157.723(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -103.503(stacking) -139.45(pairing) 85.2303(rg) 3.00189(tempr) 0.756(rate)
+9200: -191.281(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -135.463(stacking) -143.828(pairing) 88.0098(rg) 3.00189(tempr) 0.756(rate)
+9250: -186.05(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -129.386(stacking) -144.523(pairing) 87.8578(rg) 3.00189(tempr) 0.756(rate)
+9300: -146.768(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -90.0901(stacking) -146.07(pairing) 89.3922(rg) 3.00189(tempr) 0.756(rate)
+9350: -161.629(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -99.9914(stacking) -140.612(pairing) 78.974(rg) 3.00189(tempr) 0.756(rate)
+9400: -141.851(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -63.5631(stacking) -148.587(pairing) 70.2989(rg) 3.00189(tempr) 0.756(rate)
+9450: -145.421(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -79.1637(stacking) -141.964(pairing) 75.7066(rg) 3.00189(tempr) 0.756(rate)
+9500: -143.93(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -78.165(stacking) -141.363(pairing) 75.5986(rg) 3.00189(tempr) 0.756(rate)
+9550: -165.802(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -101.393(stacking) -142.001(pairing) 77.5923(rg) 2.7017(tempr) 0.748(rate)
+9600: -168.126(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -101.393(stacking) -142.001(pairing) 75.2679(rg) 2.7017(tempr) 0.748(rate)
+9650: -171.059(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -98.2284(stacking) -144.971(pairing) 72.1402(rg) 2.7017(tempr) 0.748(rate)
+9700: -173.379(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -104.26(stacking) -143.227(pairing) 74.1082(rg) 2.7017(tempr) 0.748(rate)
+9750: -171.71(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -105.396(stacking) -137.831(pairing) 71.5171(rg) 2.7017(tempr) 0.748(rate)
+9800: -174.32(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -109.614(stacking) -136.046(pairing) 71.3394(rg) 2.7017(tempr) 0.748(rate)
+9850: -191.988(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -109.517(stacking) -146.45(pairing) 63.9797(rg) 2.7017(tempr) 0.748(rate)
+9900: -185.401(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -108.545(stacking) -139.725(pairing) 62.8678(rg) 2.7017(tempr) 0.748(rate)
+9950: -184.898(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -108.545(stacking) -138.775(pairing) 62.4211(rg) 2.7017(tempr) 0.748(rate)
+10000: -180.917(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -108.545(stacking) -138.775(pairing) 66.4021(rg) 2.7017(tempr) 0.748(rate)
+10001: -180.917(total) 0(len) 0(ang) 0(dih) 0(crash) 0(cons) 0(vdw) -108.545(stacking) -138.775(pairing) 66.4021(rg) 2.43153(tempr) 0.728(rate)
+# Print Constraints and Distances...
+Print residue contacts:
+Print residue distances:
+Print atom distances:
+Residue 6 Atom 0, Residue 24 Atom 0, min: 18.245, max: 18.245, value: 13.9528
+Residue 6 Atom 1, Residue 24 Atom 1, min: 15.273, max: 15.273, value: 12.9839
+Residue 6 Atom 2, Residue 24 Atom 2, min: 10.703, max: 10.703, value: 9.63868
+Residue 6 Atom 3, Residue 24 Atom 3, min: 4.226, max: 4.226, value: 7.63076
+Residue 6 Atom 4, Residue 24 Atom 4, min: 6.334, max: 6.334, value: 7.54844
+Residue 6 Atom 5, Residue 24 Atom 5, min: 6.397, max: 6.397, value: 7.7036
+Residue 7 Atom 0, Residue 23 Atom 0, min: 17.349, max: 17.349, value: 18.2845
+Residue 7 Atom 1, Residue 23 Atom 1, min: 15.082, max: 15.082, value: 14.8048
+Residue 7 Atom 2, Residue 23 Atom 2, min: 10.675, max: 10.675, value: 10.2932
+Residue 7 Atom 3, Residue 23 Atom 3, min: 4.519, max: 4.519, value: 4.36748
+Residue 7 Atom 4, Residue 23 Atom 4, min: 6.433, max: 6.433, value: 6.95723
+Residue 7 Atom 5, Residue 23 Atom 5, min: 6.054, max: 6.054, value: 6.1393
+Residue 8 Atom 0, Residue 22 Atom 0, min: 18.244, max: 18.244, value: 18.2032
+Residue 8 Atom 1, Residue 22 Atom 1, min: 15.196, max: 15.196, value: 14.5033
+Residue 8 Atom 2, Residue 22 Atom 2, min: 10.681, max: 10.681, value: 10.3756
+Residue 8 Atom 3, Residue 22 Atom 3, min: 4.239, max: 4.239, value: 3.91299
+Residue 8 Atom 4, Residue 22 Atom 4, min: 6.514, max: 6.514, value: 6.09404
+Residue 8 Atom 5, Residue 22 Atom 5, min: 6.477, max: 6.477, value: 6.10087
+Residue 9 Atom 0, Residue 21 Atom 0, min: 18.245, max: 18.245, value: 19.4391
+Residue 9 Atom 1, Residue 21 Atom 1, min: 15.273, max: 15.273, value: 15.125
+Residue 9 Atom 2, Residue 21 Atom 2, min: 10.703, max: 10.703, value: 10.6088
+Residue 9 Atom 3, Residue 21 Atom 3, min: 4.226, max: 4.226, value: 4.42444
+Residue 9 Atom 4, Residue 21 Atom 4, min: 6.334, max: 6.334, value: 6.71055
+Residue 9 Atom 5, Residue 21 Atom 5, min: 6.397, max: 6.397, value: 6.38705
+Residue 10 Atom 0, Residue 20 Atom 0, min: 17.349, max: 17.349, value: 19.4623
+Residue 10 Atom 1, Residue 20 Atom 1, min: 15.082, max: 15.082, value: 15.3664
+Residue 10 Atom 2, Residue 20 Atom 2, min: 10.675, max: 10.675, value: 10.641
+Residue 10 Atom 3, Residue 20 Atom 3, min: 4.519, max: 4.519, value: 4.59865
+Residue 10 Atom 4, Residue 20 Atom 4, min: 6.433, max: 6.433, value: 7.02637
+Residue 10 Atom 5, Residue 20 Atom 5, min: 6.054, max: 6.054, value: 6.81352
+Residue 27 Atom 0, Residue 135 Atom 0, min: 18.245, max: 18.245, value: 16.7816
+Residue 27 Atom 1, Residue 135 Atom 1, min: 15.273, max: 15.273, value: 15.2577
+Residue 27 Atom 2, Residue 135 Atom 2, min: 10.703, max: 10.703, value: 10.9974
+Residue 27 Atom 3, Residue 135 Atom 3, min: 4.226, max: 4.226, value: 4.42968
+Residue 27 Atom 4, Residue 135 Atom 4, min: 6.334, max: 6.334, value: 6.36407
+Residue 27 Atom 5, Residue 135 Atom 5, min: 6.397, max: 6.397, value: 6.54651
+Residue 28 Atom 0, Residue 134 Atom 0, min: 18.245, max: 18.245, value: 17.633
+Residue 28 Atom 1, Residue 134 Atom 1, min: 15.273, max: 15.273, value: 15.3973
+Residue 28 Atom 2, Residue 134 Atom 2, min: 10.703, max: 10.703, value: 11.0694
+Residue 28 Atom 3, Residue 134 Atom 3, min: 4.226, max: 4.226, value: 4.41912
+Residue 28 Atom 4, Residue 134 Atom 4, min: 6.334, max: 6.334, value: 6.30637
+Residue 28 Atom 5, Residue 134 Atom 5, min: 6.397, max: 6.397, value: 6.52067
+Residue 29 Atom 0, Residue 133 Atom 0, min: 19.825, max: 19.825, value: 18.3262
+Residue 29 Atom 1, Residue 133 Atom 1, min: 15.029, max: 15.029, value: 15.1968
+Residue 29 Atom 2, Residue 133 Atom 2, min: 10.505, max: 10.505, value: 10.6694
+Residue 29 Atom 3, Residue 133 Atom 3, min: 3.93, max: 3.93, value: 4.15624
+Residue 29 Atom 4, Residue 133 Atom 4, min: 6.579, max: 6.579, value: 6.3938
+Residue 29 Atom 5, Residue 133 Atom 5, min: 6.399, max: 6.399, value: 6.52086
+Residue 30 Atom 0, Residue 132 Atom 0, min: 18.244, max: 18.244, value: 18.2691
+Residue 30 Atom 1, Residue 132 Atom 1, min: 15.196, max: 15.196, value: 14.8874
+Residue 30 Atom 2, Residue 132 Atom 2, min: 10.681, max: 10.681, value: 10.4543
+Residue 30 Atom 3, Residue 132 Atom 3, min: 4.239, max: 4.239, value: 4.14499
+Residue 30 Atom 4, Residue 132 Atom 4, min: 6.514, max: 6.514, value: 6.54328
+Residue 30 Atom 5, Residue 132 Atom 5, min: 6.477, max: 6.477, value: 6.40059
+Residue 31 Atom 0, Residue 131 Atom 0, min: 18.245, max: 18.245, value: 17.4328
+Residue 31 Atom 1, Residue 131 Atom 1, min: 15.273, max: 15.273, value: 14.3839
+Residue 31 Atom 2, Residue 131 Atom 2, min: 10.703, max: 10.703, value: 10.2268
+Residue 31 Atom 3, Residue 131 Atom 3, min: 4.226, max: 4.226, value: 4.73884
+Residue 31 Atom 4, Residue 131 Atom 4, min: 6.334, max: 6.334, value: 7.36482
+Residue 31 Atom 5, Residue 131 Atom 5, min: 6.397, max: 6.397, value: 6.27144
+Residue 32 Atom 0, Residue 130 Atom 0, min: 17.349, max: 17.349, value: 16.7648
+Residue 32 Atom 1, Residue 130 Atom 1, min: 15.082, max: 15.082, value: 15.0574
+Residue 32 Atom 2, Residue 130 Atom 2, min: 10.675, max: 10.675, value: 10.6217
+Residue 32 Atom 3, Residue 130 Atom 3, min: 4.519, max: 4.519, value: 4.18703
+Residue 32 Atom 4, Residue 130 Atom 4, min: 6.433, max: 6.433, value: 6.40766
+Residue 32 Atom 5, Residue 130 Atom 5, min: 6.054, max: 6.054, value: 6.50555
+Residue 33 Atom 0, Residue 42 Atom 0, min: 18.245, max: 18.245, value: 20.1287
+Residue 33 Atom 1, Residue 42 Atom 1, min: 15.273, max: 15.273, value: 14.9873
+Residue 33 Atom 2, Residue 42 Atom 2, min: 10.703, max: 10.703, value: 10.5749
+Residue 33 Atom 3, Residue 42 Atom 3, min: 4.226, max: 4.226, value: 4.23783
+Residue 33 Atom 4, Residue 42 Atom 4, min: 6.334, max: 6.334, value: 6.6897
+Residue 33 Atom 5, Residue 42 Atom 5, min: 6.397, max: 6.397, value: 6.61303
+Residue 34 Atom 0, Residue 41 Atom 0, min: 18.245, max: 18.245, value: 17.9482
+Residue 34 Atom 1, Residue 41 Atom 1, min: 15.273, max: 15.273, value: 15.0169
+Residue 34 Atom 2, Residue 41 Atom 2, min: 10.703, max: 10.703, value: 10.6389
+Residue 34 Atom 3, Residue 41 Atom 3, min: 4.226, max: 4.226, value: 4.20552
+Residue 34 Atom 4, Residue 41 Atom 4, min: 6.334, max: 6.334, value: 6.46094
+Residue 34 Atom 5, Residue 41 Atom 5, min: 6.397, max: 6.397, value: 6.44779
+Residue 35 Atom 0, Residue 40 Atom 0, min: 17.349, max: 17.349, value: 18.6686
+Residue 35 Atom 1, Residue 40 Atom 1, min: 15.082, max: 15.082, value: 15.2997
+Residue 35 Atom 2, Residue 40 Atom 2, min: 10.675, max: 10.675, value: 10.7999
+Residue 35 Atom 3, Residue 40 Atom 3, min: 4.519, max: 4.519, value: 4.42986
+Residue 35 Atom 4, Residue 40 Atom 4, min: 6.433, max: 6.433, value: 6.43932
+Residue 35 Atom 5, Residue 40 Atom 5, min: 6.054, max: 6.054, value: 6.67733
+Residue 51 Atom 0, Residue 89 Atom 0, min: 18.479, max: 18.479, value: 20.4825
+Residue 51 Atom 1, Residue 89 Atom 1, min: 14.817, max: 14.817, value: 14.838
+Residue 51 Atom 2, Residue 89 Atom 2, min: 10.759, max: 10.759, value: 10.675
+Residue 51 Atom 3, Residue 89 Atom 3, min: 4.596, max: 4.596, value: 4.12733
+Residue 51 Atom 4, Residue 89 Atom 4, min: 7.075, max: 7.075, value: 6.15061
+Residue 51 Atom 5, Residue 89 Atom 5, min: 6.443, max: 6.443, value: 6.34402
+Residue 52 Atom 0, Residue 88 Atom 0, min: 17.349, max: 17.349, value: 18.3178
+Residue 52 Atom 1, Residue 88 Atom 1, min: 15.082, max: 15.082, value: 15.0131
+Residue 52 Atom 2, Residue 88 Atom 2, min: 10.675, max: 10.675, value: 10.578
+Residue 52 Atom 3, Residue 88 Atom 3, min: 4.519, max: 4.519, value: 4.04693
+Residue 52 Atom 4, Residue 88 Atom 4, min: 6.433, max: 6.433, value: 6.18841
+Residue 52 Atom 5, Residue 88 Atom 5, min: 6.054, max: 6.054, value: 6.24061
+Residue 53 Atom 0, Residue 87 Atom 0, min: 18.244, max: 18.244, value: 18.4969
+Residue 53 Atom 1, Residue 87 Atom 1, min: 15.196, max: 15.196, value: 15.32
+Residue 53 Atom 2, Residue 87 Atom 2, min: 10.681, max: 10.681, value: 10.9797
+Residue 53 Atom 3, Residue 87 Atom 3, min: 4.239, max: 4.239, value: 4.22458
+Residue 53 Atom 4, Residue 87 Atom 4, min: 6.514, max: 6.514, value: 6.25837
+Residue 53 Atom 5, Residue 87 Atom 5, min: 6.477, max: 6.477, value: 6.28361
+Residue 54 Atom 0, Residue 86 Atom 0, min: 18.245, max: 18.245, value: 17.5403
+Residue 54 Atom 1, Residue 86 Atom 1, min: 15.273, max: 15.273, value: 15.3024
+Residue 54 Atom 2, Residue 86 Atom 2, min: 10.703, max: 10.703, value: 10.8885
+Residue 54 Atom 3, Residue 86 Atom 3, min: 4.226, max: 4.226, value: 4.17991
+Residue 54 Atom 4, Residue 86 Atom 4, min: 6.334, max: 6.334, value: 6.10954
+Residue 54 Atom 5, Residue 86 Atom 5, min: 6.397, max: 6.397, value: 6.1635
+Residue 55 Atom 0, Residue 85 Atom 0, min: 19.825, max: 19.825, value: 18.3186
+Residue 55 Atom 1, Residue 85 Atom 1, min: 15.029, max: 15.029, value: 15.1656
+Residue 55 Atom 2, Residue 85 Atom 2, min: 10.505, max: 10.505, value: 10.6659
+Residue 55 Atom 3, Residue 85 Atom 3, min: 3.93, max: 3.93, value: 4.03004
+Residue 55 Atom 4, Residue 85 Atom 4, min: 6.579, max: 6.579, value: 6.31513
+Residue 55 Atom 5, Residue 85 Atom 5, min: 6.399, max: 6.399, value: 6.35331
+Residue 56 Atom 0, Residue 84 Atom 0, min: 18.244, max: 18.244, value: 18.9369
+Residue 56 Atom 1, Residue 84 Atom 1, min: 15.196, max: 15.196, value: 15.5358
+Residue 56 Atom 2, Residue 84 Atom 2, min: 10.681, max: 10.681, value: 11.0173
+Residue 56 Atom 3, Residue 84 Atom 3, min: 4.239, max: 4.239, value: 4.32698
+Residue 56 Atom 4, Residue 84 Atom 4, min: 6.514, max: 6.514, value: 6.39447
+Residue 56 Atom 5, Residue 84 Atom 5, min: 6.477, max: 6.477, value: 6.47615
+Residue 57 Atom 0, Residue 83 Atom 0, min: 17.349, max: 17.349, value: 18.6445
+Residue 57 Atom 1, Residue 83 Atom 1, min: 15.082, max: 15.082, value: 15.095
+Residue 57 Atom 2, Residue 83 Atom 2, min: 10.675, max: 10.675, value: 10.7783
+Residue 57 Atom 3, Residue 83 Atom 3, min: 4.519, max: 4.519, value: 4.21279
+Residue 57 Atom 4, Residue 83 Atom 4, min: 6.433, max: 6.433, value: 6.2881
+Residue 57 Atom 5, Residue 83 Atom 5, min: 6.054, max: 6.054, value: 6.29362
+Residue 58 Atom 0, Residue 82 Atom 0, min: 18.479, max: 18.479, value: 18.3894
+Residue 58 Atom 1, Residue 82 Atom 1, min: 14.817, max: 14.817, value: 14.7272
+Residue 58 Atom 2, Residue 82 Atom 2, min: 10.759, max: 10.759, value: 10.1712
+Residue 58 Atom 3, Residue 82 Atom 3, min: 4.596, max: 4.596, value: 3.81114
+Residue 58 Atom 4, Residue 82 Atom 4, min: 7.075, max: 7.075, value: 6.19133
+Residue 58 Atom 5, Residue 82 Atom 5, min: 6.443, max: 6.443, value: 6.30925
+Residue 62 Atom 0, Residue 78 Atom 0, min: 17.349, max: 17.349, value: 19.1286
+Residue 62 Atom 1, Residue 78 Atom 1, min: 15.082, max: 15.082, value: 14.9713
+Residue 62 Atom 2, Residue 78 Atom 2, min: 10.675, max: 10.675, value: 10.473
+Residue 62 Atom 3, Residue 78 Atom 3, min: 4.519, max: 4.519, value: 4.10136
+Residue 62 Atom 4, Residue 78 Atom 4, min: 6.433, max: 6.433, value: 6.31249
+Residue 62 Atom 5, Residue 78 Atom 5, min: 6.054, max: 6.054, value: 6.40781
+Residue 63 Atom 0, Residue 77 Atom 0, min: 18.244, max: 18.244, value: 18.2685
+Residue 63 Atom 1, Residue 77 Atom 1, min: 15.196, max: 15.196, value: 15.0602
+Residue 63 Atom 2, Residue 77 Atom 2, min: 10.681, max: 10.681, value: 10.5182
+Residue 63 Atom 3, Residue 77 Atom 3, min: 4.239, max: 4.239, value: 4.07454
+Residue 63 Atom 4, Residue 77 Atom 4, min: 6.514, max: 6.514, value: 6.32589
+Residue 63 Atom 5, Residue 77 Atom 5, min: 6.477, max: 6.477, value: 6.38943
+Residue 64 Atom 0, Residue 76 Atom 0, min: 17.349, max: 17.349, value: 17.6676
+Residue 64 Atom 1, Residue 76 Atom 1, min: 15.082, max: 15.082, value: 15.0023
+Residue 64 Atom 2, Residue 76 Atom 2, min: 10.675, max: 10.675, value: 10.605
+Residue 64 Atom 3, Residue 76 Atom 3, min: 4.519, max: 4.519, value: 4.59311
+Residue 64 Atom 4, Residue 76 Atom 4, min: 6.433, max: 6.433, value: 6.88137
+Residue 64 Atom 5, Residue 76 Atom 5, min: 6.054, max: 6.054, value: 6.17471
+Residue 66 Atom 0, Residue 75 Atom 0, min: 18.244, max: 18.244, value: 18.1645
+Residue 66 Atom 1, Residue 75 Atom 1, min: 15.196, max: 15.196, value: 15.2319
+Residue 66 Atom 2, Residue 75 Atom 2, min: 10.681, max: 10.681, value: 10.7002
+Residue 66 Atom 3, Residue 75 Atom 3, min: 4.239, max: 4.239, value: 4.20429
+Residue 66 Atom 4, Residue 75 Atom 4, min: 6.514, max: 6.514, value: 6.42593
+Residue 66 Atom 5, Residue 75 Atom 5, min: 6.477, max: 6.477, value: 6.55401
+Residue 67 Atom 0, Residue 74 Atom 0, min: 19.825, max: 19.825, value: 18.1906
+Residue 67 Atom 1, Residue 74 Atom 1, min: 15.029, max: 15.029, value: 15.0078
+Residue 67 Atom 2, Residue 74 Atom 2, min: 10.505, max: 10.505, value: 10.4665
+Residue 67 Atom 3, Residue 74 Atom 3, min: 3.93, max: 3.93, value: 4.03149
+Residue 67 Atom 4, Residue 74 Atom 4, min: 6.579, max: 6.579, value: 6.32943
+Residue 67 Atom 5, Residue 74 Atom 5, min: 6.399, max: 6.399, value: 6.48161
+Residue 68 Atom 0, Residue 73 Atom 0, min: 18.368, max: 18.368, value: 18.6936
+Residue 68 Atom 1, Residue 73 Atom 1, min: 15.088, max: 15.088, value: 15.1058
+Residue 68 Atom 2, Residue 73 Atom 2, min: 10.647, max: 10.647, value: 10.5905
+Residue 68 Atom 3, Residue 73 Atom 3, min: 5.34, max: 5.34, value: 4.16089
+Residue 68 Atom 4, Residue 73 Atom 4, min: 6.874, max: 6.874, value: 6.39241
+Residue 68 Atom 5, Residue 73 Atom 5, min: 6.43, max: 6.43, value: 6.24059
+Residue 90 Atom 0, Residue 104 Atom 0, min: 18.245, max: 18.245, value: 18.8109
+Residue 90 Atom 1, Residue 104 Atom 1, min: 15.273, max: 15.273, value: 14.7015
+Residue 90 Atom 2, Residue 104 Atom 2, min: 10.703, max: 10.703, value: 10.6455
+Residue 90 Atom 3, Residue 104 Atom 3, min: 4.226, max: 4.226, value: 4.13395
+Residue 90 Atom 4, Residue 104 Atom 4, min: 6.334, max: 6.334, value: 6.15603
+Residue 90 Atom 5, Residue 104 Atom 5, min: 6.397, max: 6.397, value: 6.35332
+Residue 91 Atom 0, Residue 103 Atom 0, min: 19.825, max: 19.825, value: 18.49
+Residue 91 Atom 1, Residue 103 Atom 1, min: 15.029, max: 15.029, value: 15.2053
+Residue 91 Atom 2, Residue 103 Atom 2, min: 10.505, max: 10.505, value: 10.6121
+Residue 91 Atom 3, Residue 103 Atom 3, min: 3.93, max: 3.93, value: 4.0636
+Residue 91 Atom 4, Residue 103 Atom 4, min: 6.579, max: 6.579, value: 6.24744
+Residue 91 Atom 5, Residue 103 Atom 5, min: 6.399, max: 6.399, value: 6.33742
+Residue 92 Atom 0, Residue 102 Atom 0, min: 18.368, max: 18.368, value: 18.4067
+Residue 92 Atom 1, Residue 102 Atom 1, min: 15.088, max: 15.088, value: 15.2081
+Residue 92 Atom 2, Residue 102 Atom 2, min: 10.647, max: 10.647, value: 10.6178
+Residue 92 Atom 3, Residue 102 Atom 3, min: 5.34, max: 5.34, value: 4.04712
+Residue 92 Atom 4, Residue 102 Atom 4, min: 6.874, max: 6.874, value: 6.36032
+Residue 92 Atom 5, Residue 102 Atom 5, min: 6.43, max: 6.43, value: 6.43605
+Residue 93 Atom 0, Residue 101 Atom 0, min: 17.349, max: 17.349, value: 17.6264
+Residue 93 Atom 1, Residue 101 Atom 1, min: 15.082, max: 15.082, value: 15.2367
+Residue 93 Atom 2, Residue 101 Atom 2, min: 10.675, max: 10.675, value: 10.7271
+Residue 93 Atom 3, Residue 101 Atom 3, min: 4.519, max: 4.519, value: 4.15248
+Residue 93 Atom 4, Residue 101 Atom 4, min: 6.433, max: 6.433, value: 6.3474
+Residue 93 Atom 5, Residue 101 Atom 5, min: 6.054, max: 6.054, value: 6.27087
+Residue 94 Atom 0, Residue 100 Atom 0, min: 19.825, max: 19.825, value: 17.553
+Residue 94 Atom 1, Residue 100 Atom 1, min: 15.029, max: 15.029, value: 15.3416
+Residue 94 Atom 2, Residue 100 Atom 2, min: 10.505, max: 10.505, value: 10.9376
+Residue 94 Atom 3, Residue 100 Atom 3, min: 3.93, max: 3.93, value: 4.21212
+Residue 94 Atom 4, Residue 100 Atom 4, min: 6.579, max: 6.579, value: 6.27313
+Residue 94 Atom 5, Residue 100 Atom 5, min: 6.399, max: 6.399, value: 6.39849
+Residue 106 Atom 0, Residue 128 Atom 0, min: 18.245, max: 18.245, value: 17.8711
+Residue 106 Atom 1, Residue 128 Atom 1, min: 15.273, max: 15.273, value: 15.3955
+Residue 106 Atom 2, Residue 128 Atom 2, min: 10.703, max: 10.703, value: 10.7767
+Residue 106 Atom 3, Residue 128 Atom 3, min: 4.226, max: 4.226, value: 4.24349
+Residue 106 Atom 4, Residue 128 Atom 4, min: 6.334, max: 6.334, value: 6.30471
+Residue 106 Atom 5, Residue 128 Atom 5, min: 6.397, max: 6.397, value: 6.32923
+Residue 107 Atom 0, Residue 127 Atom 0, min: 17.349, max: 17.349, value: 18.5589
+Residue 107 Atom 1, Residue 127 Atom 1, min: 15.082, max: 15.082, value: 14.7391
+Residue 107 Atom 2, Residue 127 Atom 2, min: 10.675, max: 10.675, value: 10.3069
+Residue 107 Atom 3, Residue 127 Atom 3, min: 4.519, max: 4.519, value: 4.68347
+Residue 107 Atom 4, Residue 127 Atom 4, min: 6.433, max: 6.433, value: 7.15181
+Residue 107 Atom 5, Residue 127 Atom 5, min: 6.054, max: 6.054, value: 6.23668
+Residue 108 Atom 0, Residue 126 Atom 0, min: 18.245, max: 18.245, value: 18.239
+Residue 108 Atom 1, Residue 126 Atom 1, min: 15.273, max: 15.273, value: 15.2277
+Residue 108 Atom 2, Residue 126 Atom 2, min: 10.703, max: 10.703, value: 10.6725
+Residue 108 Atom 3, Residue 126 Atom 3, min: 4.226, max: 4.226, value: 4.21066
+Residue 108 Atom 4, Residue 126 Atom 4, min: 6.334, max: 6.334, value: 6.39117
+Residue 108 Atom 5, Residue 126 Atom 5, min: 6.397, max: 6.397, value: 6.40785
+Residue 109 Atom 0, Residue 125 Atom 0, min: 19.825, max: 19.825, value: 18.084
+Residue 109 Atom 1, Residue 125 Atom 1, min: 15.029, max: 15.029, value: 14.6804
+Residue 109 Atom 2, Residue 125 Atom 2, min: 10.505, max: 10.505, value: 10.2816
+Residue 109 Atom 3, Residue 125 Atom 3, min: 3.93, max: 3.93, value: 3.67847
+Residue 109 Atom 4, Residue 125 Atom 4, min: 6.579, max: 6.579, value: 5.93315
+Residue 109 Atom 5, Residue 125 Atom 5, min: 6.399, max: 6.399, value: 5.99028
+Residue 110 Atom 0, Residue 124 Atom 0, min: 18.244, max: 18.244, value: 17.4037
+Residue 110 Atom 1, Residue 124 Atom 1, min: 15.196, max: 15.196, value: 15.0705
+Residue 110 Atom 2, Residue 124 Atom 2, min: 10.681, max: 10.681, value: 10.7972
+Residue 110 Atom 3, Residue 124 Atom 3, min: 4.239, max: 4.239, value: 4.16854
+Residue 110 Atom 4, Residue 124 Atom 4, min: 6.514, max: 6.514, value: 6.24332
+Residue 110 Atom 5, Residue 124 Atom 5, min: 6.477, max: 6.477, value: 6.23675
+Residue 111 Atom 0, Residue 122 Atom 0, min: 18.245, max: 18.245, value: 18.4133
+Residue 111 Atom 1, Residue 122 Atom 1, min: 15.273, max: 15.273, value: 16.4093
+Residue 111 Atom 2, Residue 122 Atom 2, min: 10.703, max: 10.703, value: 12.3374
+Residue 111 Atom 3, Residue 122 Atom 3, min: 4.226, max: 4.226, value: 4.41032
+Residue 111 Atom 4, Residue 122 Atom 4, min: 6.334, max: 6.334, value: 8.22877
+Residue 111 Atom 5, Residue 122 Atom 5, min: 6.397, max: 6.397, value: 5.4143
+Residue 113 Atom 0, Residue 120 Atom 0, min: 18.368, max: 18.368, value: 20.1494
+Residue 113 Atom 1, Residue 120 Atom 1, min: 15.088, max: 15.088, value: 14.4223
+Residue 113 Atom 2, Residue 120 Atom 2, min: 10.647, max: 10.647, value: 10.0117
+Residue 113 Atom 3, Residue 120 Atom 3, min: 5.34, max: 5.34, value: 3.9035
+Residue 113 Atom 4, Residue 120 Atom 4, min: 6.874, max: 6.874, value: 6.09931
+Residue 113 Atom 5, Residue 120 Atom 5, min: 6.43, max: 6.43, value: 6.13351
+Residue 114 Atom 0, Residue 119 Atom 0, min: 18.245, max: 18.245, value: 18.0197
+Residue 114 Atom 1, Residue 119 Atom 1, min: 15.273, max: 15.273, value: 14.931
+Residue 114 Atom 2, Residue 119 Atom 2, min: 10.703, max: 10.703, value: 10.4758
+Residue 114 Atom 3, Residue 119 Atom 3, min: 4.226, max: 4.226, value: 4.08281
+Residue 114 Atom 4, Residue 119 Atom 4, min: 6.334, max: 6.334, value: 6.25061
+Residue 114 Atom 5, Residue 119 Atom 5, min: 6.397, max: 6.397, value: 6.24027
+# Finishing running...
+# Displaying pairing information
+8 9 -2.37985 0 
+8 24 0 -3.45125 
+9 10 -3.3931 0 
+9 23 0 -0.599946 
+10 22 0 -0.685619 
+11 12 -2.55848 0 
+11 21 0 -2.15914 
+11 22 8.95215 0 
+12 13 -1.49389 0 
+12 20 0 -0.152926 
+13 14 -0.640194 0 
+13 19 0 -3.10655 
+15 16 -2.44107 0 
+17 19 -2.67809 0 
+19 20 -1.2706 0 
+22 23 -3.25371 0 
+23 24 -0.976072 0 
+28 29 -0.326057 0 
+28 136 0 -3.97837 
+29 30 -1.05292 0 
+29 135 0 -4.33913 
+29 136 0.410847 0 
+30 134 0 -4.90839 
+31 32 -3.47525 0 
+31 133 0 -4.11747 
+31 134 7.97269 0 
+32 132 0 -0.669346 
+33 131 0 -4.12782 
+33 132 0.422412 0 
+34 35 -0.643923 0 
+34 43 0 -4.01287 
+35 42 0 -4.86034 
+35 43 0.460745 0 
+36 37 -2.30623 0 
+36 40 0 -1.67798 
+36 41 0 -4.05545 
+36 42 5.71967 0 
+37 40 0 -0.593264 
+39 40 -2.08576 0 
+42 43 -2.42501 0 
+50 51 -3.42672 0 
+52 90 0 -4.46932 
+53 54 -2.2704 0 
+53 89 0 -5.1955 
+54 55 -2.90354 0 
+54 88 0 -4.49074 
+55 56 -3.55292 0 
+55 87 0 -4.38354 
+56 86 0 -5.42462 
+57 58 -3.02321 0 
+57 85 0 -4.75658 
+57 86 6.10124 0 
+58 59 -3.23635 0 
+58 84 0 0.967177 
+59 83 0 1.0512 
+61 81 0 -2.22585 
+64 65 2.8392 0 
+64 78 0 -4.68012 
+66 78 0 -0.0925538 
+67 68 -3.58147 0 
+67 76 0 -4.6946 
+68 75 0 -4.7659 
+69 74 0 1.92784 
+70 72 0 -0.304231 
+70 73 0 -0.716463 
+70 74 2.414 0 
+72 73 -2.77543 0 
+75 76 -2.96372 0 
+77 78 0.946985 0 
+79 82 -0.123847 0 
+86 87 -2.98081 0 
+87 88 -0.75508 0 
+88 89 -1.10853 0 
+91 105 0 -4.24778 
+92 104 0 -5.27992 
+93 94 -2.65833 0 
+93 103 0 -5.3328 
+93 104 8.31925 0 
+94 95 -1.57576 0 
+94 102 0 -5.0322 
+95 101 0 -4.84113 
+97 98 -2.55275 0 
+98 99 -3.05294 0 
+99 100 -2.88936 0 
+101 102 -1.69629 0 
+102 103 -0.921199 0 
+104 105 -2.38967 0 
+107 129 0 -4.62788 
+108 109 -4.74565 0 
+108 128 0 -0.694127 
+108 129 7.03426 0 
+109 127 0 -4.71288 
+111 125 0 -4.33769 
+112 123 0 -2.47851 
+112 124 0 -0.755792 
+114 121 0 -2.0349 
+114 122 0 -0.288772 
+115 116 -2.24951 0 
+115 120 0 -4.36064 
+116 117 -2.47914 0 
+127 128 -2.99531 0 
+132 133 -4.86145 0 
+134 135 -2.27118 0 
+135 136 -2.42501 0 
+# Coarsed Grained To All Atom...
+# Restore fixed ranges...
+# Transform sequences...
+# Writing final model...
+# Displaying ending information...
+----------------------------------------
+Finish Time: Tue Jan 20 10:06:22 2026
+
+Time elapsed: 156s
+=========================================================
+
+End time: Tue Jan 20 10:06:22 2026
+
+Elapsed seconds: 183.654s
